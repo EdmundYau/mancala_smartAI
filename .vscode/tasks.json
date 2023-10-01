@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-Wall",
+                "-o",
+                //this is where the executable file will go
+                "${workspaceFolder}/build/output",
+                //this will compile each of the .cpp files
+                "${workspaceFolder}/src/*.cpp",
+                //this will include all the headerfiles for the .cpp files
+                "-I${workspaceFolder}/header"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
